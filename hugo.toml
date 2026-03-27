@@ -2,7 +2,7 @@
 baseURL = "https://tsugihagidake.github.io/"
 languageCode = "zh-cn"
 title = "tsugihagi"
-theme = "stack"
+theme = "hugo-theme-stack"
 paginate = 8
 enableRobotsTXT = true
 enableEmoji = true
