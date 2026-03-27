@@ -1,5 +1,4 @@
 baseURL = "https://tsugihagidake.github.io/"
 languageCode = "zh-cn"
 title = "我的博客"
-theme = "stack"  # 启用官方Stack模板
-
+theme = "stack"
