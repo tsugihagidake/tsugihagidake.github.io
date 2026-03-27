@@ -39,7 +39,7 @@ defaultTheme = "auto"
 
 # 🔥 100%正确 侧边栏配置（头像+表情+文字）
 [params.sidebar]
-emoji = "🤔"
+emoji = "😭"
 subtitle = "你知道吗，这行字在头像下面哦~我去不早说！（能不能说点大家不知道的）"
 avatar = "https://avatars.githubusercontent.com/tsugihagidake"
 
