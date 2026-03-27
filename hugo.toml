@@ -1,0 +1,7 @@
+baseURL = "https://tsugihagidake.github.io/"
+languageCode = "zh-CN"
+title = "我的博客"
+theme = "hugo-theme-stack"
+
+[params.colorScheme]
+default = "auto"
