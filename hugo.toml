@@ -1,9 +1,9 @@
 # 基础配置
 baseURL = "https://tsugihagidake.github.io/"
 languageCode = "zh-cn"
-title = "tsugihagi"
-theme = "stack"
-paginate = 8
+title = "出口は直ぐ其処"
+theme = "hugo-theme-stack"
+paginate = 5
 enableRobotsTXT = true
 enableEmoji = true
 
@@ -32,16 +32,18 @@ weight = 4
 
 # 核心配置
 [params]
-author = "tsugihagi"
+featuredImageField = "image"  # 告诉主题：封面字段是image
+author = "出口は直ぐ其処"
 description = "You found me"
 keywords = "博客,Hugo,技术,生活"
 defaultTheme = "auto"
 
 # 侧边栏配置（头像100%生效）
 [params.sidebar]
-emoji = "😭"
+emoji = "🤔"
 subtitle = "你知道吗，这行字在头像下面哦~我去不早说！（能不能说点大家不知道的）"
 avatar = "https://avatars.githubusercontent.com/tsugihagidake"
+left = ["profile", "social", "recent"]
 
 # 关于我组件
 [params.widgets.about]
@@ -52,7 +54,4 @@ description = "You found me"
 # 社交链接
 [params.social]
 github = "tsugihagidake"
-email = "z13684009462@gmail.com"
 
-[params.home]
-showPosts = true
