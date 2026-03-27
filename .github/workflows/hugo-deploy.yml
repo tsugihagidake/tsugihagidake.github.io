@@ -1,26 +1,32 @@
-name: Deploy Hugo to GitHub Pages
+name: Deploy Hugo site to Pages
+
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-  build-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
 
-      - name: Install Hugo
+      - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           extended: true
 
-      - name: Build website
+      - name: Build
         run: hugo --minify
 
-        - name: Deploy
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}  # <-- 加这一行
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
