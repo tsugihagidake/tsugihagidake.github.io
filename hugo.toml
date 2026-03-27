@@ -41,7 +41,7 @@ defaultTheme = "auto"
 [params.sidebar]
 emoji = "😭"
 subtitle = "你知道吗，这行字在头像下面哦~我去不早说！（能不能说点大家不知道的）"
-avatar = "\images\Avatar.jpg"
+avatar = "/images/Avatar.jpg"
 
 # 关于我组件
 [params.widgets.about]
