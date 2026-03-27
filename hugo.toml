@@ -2,7 +2,7 @@
 baseURL = "https://tsugihagidake.github.io/"
 languageCode = "zh-cn"
 title = "tsugihagi"
-theme = "hugo-theme-stack"
+theme = "stack"
 paginate = 8
 enableRobotsTXT = true
 enableEmoji = true
@@ -37,11 +37,11 @@ description = "You found me"
 keywords = "博客,Hugo,技术,生活"
 defaultTheme = "auto"
 
-# 🔥 100%正确 侧边栏配置（头像+表情+文字）
+# 侧边栏配置（头像100%生效）
 [params.sidebar]
 emoji = "😭"
 subtitle = "你知道吗，这行字在头像下面哦~我去不早说！（能不能说点大家不知道的）"
-avatar = "/static/images/Avatar.jpg"
+avatar = "/images/Avatar.jpg"
 
 # 关于我组件
 [params.widgets.about]
@@ -53,5 +53,6 @@ description = "You found me"
 [params.social]
 github = "tsugihagidake"
 email = "z13684009462@gmail.com"
+
 [params.home]
 showPosts = true
