@@ -1,7 +1,7 @@
 ---
 title: "初次见面！"
 date: 2026-03-27
-image: "/cover.jpg"
+image: cover.jpg
 draft: false
 ---
 
