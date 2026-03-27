@@ -2,7 +2,7 @@ name: 自动构建Hugo博客并部署到GitHub Pages
 on:
   push:
     branches:
-      - master
+      - main
 
 permissions:
   contents: read
