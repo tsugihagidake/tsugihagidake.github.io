@@ -3,6 +3,8 @@ title: "初次见面！"
 date: 2026-03-27
 image: cover.jpg
 draft: false
+categories:
+  - "其他关于我"
 ---
 
 这里是一名计算机专业的大学生！想在这里记录并整理一些自己学到的知识

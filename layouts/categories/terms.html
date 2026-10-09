@@ -1,0 +1,33 @@
+{{ define "main" }}
+    <header>
+        <h3 class="section-title">分类集</h3>
+
+        <div class="section-card">
+            <div class="section-details">
+                <h1 class="section-term">{{ .Title }}</h1>
+                {{ with .Params.description }}
+                    <h2 class="section-description">{{ . }}</h2>
+                {{ end }}
+            </div>
+        </div>
+    </header>
+
+    {{ with .Pages }}
+        <aside>
+            <h2 class="section-title">共 {{ len . }} 个分类</h2>
+            <div class="subsection-list">
+                <div class="article-list--tile">
+                    {{ range . }}
+                        {{ partial "article-list/tile" . }}
+                    {{ end }}
+                </div>
+            </div>
+        </aside>
+    {{ end }}
+
+    {{ partialCached "footer/footer" . }}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}

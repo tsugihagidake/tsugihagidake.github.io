@@ -1,57 +1,86 @@
-# 基础配置
+# 站点基础信息
 baseURL = "https://tsugihagidake.github.io/"
-languageCode = "zh-cn"
+languageCode = "zh-CN"
+defaultContentLanguage = "zh"
+hasCJKLanguage = true
 title = "出口は直ぐ其処"
 theme = "hugo-theme-stack"
-paginate = 5
 enableRobotsTXT = true
 enableEmoji = true
 
-# 导航菜单
+[pagination]
+pagerSize = 5
+
+[permalinks]
+page = "/:slug/"
+
+# 左侧主导航
 [menu]
 [[menu.main]]
 identifier = "home"
 name = "首页"
 url = "/"
 weight = 1
+
+[menu.main.params]
+icon = "home"
+
 [[menu.main]]
-identifier = "archives"
-name = "归档"
-url = "/archives/"
+identifier = "categories"
+name = "分类集"
+url = "/categories/"
 weight = 2
-[[menu.main]]
-identifier = "tags"
-name = "标签"
-url = "/tags/"
-weight = 3
-[[menu.main]]
-identifier = "about"
-name = "关于"
-url = "/about/"
-weight = 4
 
-# 核心配置
+[menu.main.params]
+icon = "categories"
+
+# 头像下方的社交链接
+[[menu.social]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/tsugihagidake"
+weight = 1
+
+[menu.social.params]
+icon = "brand-github"
+newTab = true
+
 [params]
-featuredImageField = "image"  # 告诉主题：封面字段是image
-author = "出口は直ぐ其処"
+mainSections = ["post"]
+rssFullContent = true
+# 用于搜索引擎和分享卡片；侧栏可见文字请修改 sidebar.subtitle。
 description = "You found me"
-keywords = "博客,Hugo,技术,生活"
-defaultTheme = "auto"
 
-# 侧边栏配置（头像100%生效）
 [params.sidebar]
+compact = false
 emoji = "🤔"
-subtitle = "你知道吗，这行字在头像下面哦~我去不早说！（能不能说点大家不知道的）"
+subtitle = "在世界尽头呼唤……我自己？！"
 avatar = "https://avatars.githubusercontent.com/tsugihagidake"
-left = ["profile", "social", "recent"]
 
-# 关于我组件
-[params.widgets.about]
-enable = true
-title = "关于我"
-description = "You found me"
+[params.colorScheme]
+toggle = true
+default = "auto"
 
-# 社交链接
-[params.social]
-github = "tsugihagidake"
+[params.article]
+headingAnchor = false
+toc = true
+readingTime = true
 
+[params.article.list]
+showTags = false
+
+# 右侧栏：主页显示搜索与分类，文章页显示目录。
+[params.widgets]
+homepage = [
+    { type = "search" },
+    { type = "categories", params = { limit = 10 } },
+]
+page = [{ type = "toc" }]
+
+[params.footer]
+since = 2026
+customText = ""
+
+# 尚未配置评论服务时保持关闭，避免生成无效评论区。
+[params.comments]
+enabled = false
