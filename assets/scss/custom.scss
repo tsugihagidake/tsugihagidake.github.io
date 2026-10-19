@@ -36,6 +36,11 @@
     margin-left: 0;
 }
 
+// Keep more of the upper part of the Omori cover visible in cropped previews.
+.article-image img[src*="/omori"] {
+    object-position: center 20%;
+}
+
 // Let the article use the space previously occupied by the right-hand ToC.
 @media (min-width: 768px) {
     .reading-layout .main-container {
