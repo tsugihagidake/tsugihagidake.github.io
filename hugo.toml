@@ -81,6 +81,11 @@ page = [{ type = "toc" }]
 since = 2026
 customText = ""
 
-# 尚未配置评论服务时保持关闭，避免生成无效评论区。
+# 使用 GitHub Issues 保存文章评论。
 [params.comments]
-enabled = false
+enabled = true
+provider = "utterances"
+
+[params.comments.utterances]
+repo = "tsugihagidake/tsugihagidake.github.io"
+issueTerm = "pathname"
