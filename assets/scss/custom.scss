@@ -35,3 +35,74 @@
 .article-page .article-header .article-list-categories {
     margin-left: 0;
 }
+
+// Let the article use the space previously occupied by the right-hand ToC.
+@media (min-width: 768px) {
+    .reading-layout .main-container {
+        max-width: none;
+        --left-sidebar-max-width: 240px;
+    }
+
+    .reading-layout .left-sidebar {
+        width: 240px;
+        --sidebar-element-separation: 20px;
+    }
+
+    .reading-layout #main-menu {
+        min-height: 0;
+        overflow: hidden;
+        gap: 24px;
+    }
+
+    .reading-layout #main-menu > li {
+        flex-shrink: 0;
+    }
+
+    .reading-layout #main-menu > .reading-toc {
+        flex: 0 1 auto;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .reading-layout .article-toc {
+        display: none;
+    }
+}
+
+.reading-toc-title {
+    font-size: 1.3rem;
+    margin: 0 0 10px;
+    color: var(--card-text-color-tertiary);
+}
+
+.reading-toc .widget--toc {
+    min-height: 0;
+    box-shadow: none;
+    background: transparent;
+    overflow: hidden;
+}
+
+.reading-toc .toc-nav {
+    max-height: 32vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding-right: 8px;
+}
+
+#main-menu .reading-toc .toc-nav {
+    ul { padding: 0; list-style: none; }
+    li { margin: 0; padding: 0; }
+    li > ul { padding-left: 12px; margin: 0; }
+    a { display: block; padding: 5px 0; overflow-wrap: anywhere; }
+    li.active-class > a { margin-left: 0; padding-left: 6px; }
+}
+
+@media (max-width: 767px) {
+    .reading-toc { display: none; }
+}

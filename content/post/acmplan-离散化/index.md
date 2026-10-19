@@ -1,7 +1,9 @@
 ---
 title: "离散化"
-date: 2026-10-10
+date: 2026-10-19
 image: omori.jpg
+aliases:
+  - /post/acmplan-离散化/离散化/
 draft: false
 categories:
   - "算法计划"

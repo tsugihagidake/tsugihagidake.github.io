@@ -1,0 +1,10 @@
+{{ if and .IsPage (.Scratch.Get "TOCEnabled") }}
+<li class="reading-toc">
+    <h2 class="reading-toc-title">文章目录</h2>
+    <div class="widget--toc">
+        <nav class="toc-nav" id="TableOfContents" aria-label="文章目录">
+            {{ partial "article/components/toc" . | safeHTML }}
+        </nav>
+    </div>
+</li>
+{{ end }}
